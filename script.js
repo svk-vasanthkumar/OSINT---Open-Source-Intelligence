@@ -11,7 +11,7 @@ const challenges = [
         focus: ["Image Investigation", "Geolocation", "Verification"],
         description: "Practice identifying locations, verifying images and solving visual investigation challenges. Perfect for developing a critical eye for visual clues.",
         difficulty: "Beginner → Intermediate",
-        levelScore: 35, 
+        levelScore: 35, // For UI progress bar
         url: "https://challenge.bellingcat.com/",
         category: "image",
         status: "AVAILABLE"
@@ -130,14 +130,16 @@ document.addEventListener("DOMContentLoaded", () => {
 // 1. System Loader
 function initSystemLoader() {
     const loader = document.getElementById('sys-loader');
+    // Short artificial delay for system initialization feel
     setTimeout(() => {
         loader.style.opacity = '0';
         setTimeout(() => {
             loader.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto'; // Re-enable scroll
+            // Trigger first reveals
             document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('active'));
         }, 500);
-    }, 600);
+    }, 600); // 600ms load as per requirements
 }
 
 // 2. Scroll Nav & Animations
@@ -148,6 +150,7 @@ function initScrollNav() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Update side nav
                 navDots.forEach(dot => {
                     dot.classList.remove('active');
                     if (dot.getAttribute('href') === `#${entry.target.id}`) {
@@ -160,10 +163,11 @@ function initScrollNav() {
 
     sections.forEach(sec => observer.observe(sec));
     
+    // Navbar background blur on scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if(window.scrollY > 50) {
-            navbar.style.background = 'rgba(7, 2, 2, 0.95)';
+            navbar.style.background = 'rgba(7, 2, 2, 0.9)';
             navbar.style.borderBottomColor = 'var(--accent-red)';
         } else {
             navbar.style.background = 'rgba(7, 2, 2, 0.7)';
@@ -201,27 +205,16 @@ function initThreadAnimation() {
     });
 }
 
-// 3. Mobile Menu (Updated logic for touch-friendly toggle)
+// 3. Mobile Menu
 function initMobileMenu() {
     const toggleBtn = document.querySelector('.mobile-menu-toggle');
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     if (toggleBtn && navbar) {
-        toggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navbar.classList.toggle('menu-open');
-        });
-        
+        toggleBtn.addEventListener('click', () => navbar.classList.toggle('menu-open'));
         navLinks.forEach(link => {
             link.addEventListener('click', () => navbar.classList.remove('menu-open'));
-        });
-
-        // Close when clicking outside on mobile
-        document.addEventListener('click', (e) => {
-            if(navbar.classList.contains('menu-open') && !navbar.contains(e.target)) {
-                navbar.classList.remove('menu-open');
-            }
         });
     }
 }
@@ -258,6 +251,7 @@ function renderMissions(data) {
         </div>
     `).join('');
 
+    // Re-attach listeners to new buttons
     attachModalListeners();
 }
 
@@ -265,9 +259,11 @@ function initFilters() {
     const btns = document.querySelectorAll('.filter-btn');
     btns.forEach(btn => {
         btn.addEventListener('click', (e) => {
+            // UI Update
             btns.forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
             
+            // Logic Update
             const filter = e.target.getAttribute('data-filter');
             if(filter === 'all') {
                 renderMissions(challenges);
@@ -334,6 +330,7 @@ function initDecisionMatrix() {
             const targetIdx = e.target.getAttribute('data-target');
             const rec = challenges[targetIdx];
             
+            // Render Result
             resultPanel.innerHTML = `
                 <div class="di-rec">
                     <span class="di-rec-lbl">RECOMMENDED STARTING POINT</span>
