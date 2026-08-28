@@ -1,110 +1,91 @@
-<p align="center">
-  <img src="./logo.png" alt="KASCORE Logo" width="180">
-</p>
+<div align="center">
 
-<h1 align="center">KASCORE — OSINT Resource Hub</h1>
+<img src="./logo.png" alt="KASCORE Logo" width="180">
 
-<p align="center">
-  <strong>Find the clues. Connect the evidence. Verify the story.</strong>
-</p>
+# 🔴 KASCORE OSINT Intelligence Terminal
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Responsive-Mobile%20First-4ADE80?style=flat-square" alt="Responsive">
-  <img src="https://img.shields.io/badge/Domain-Cybersecurity-ff2a2a?style=flat-square" alt="Cybersecurity">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT License">
-</p>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=FF2A2A&center=true&vCenter=true&width=600&lines=Open-Source+Intelligence+Matrix;Curated+Investigation+Challenges;Interactive+Cyber+Dashboard;System+Architecture+by+SVK)](https://git.io/typing-svg)
 
----
+**Find the clues. Connect the evidence. Verify the story.**
 
-KASCORE OSINT Resource Hub is an interactive cybersecurity learning resource designed to help learners move from reading about Open-Source Intelligence (OSINT) to actually practicing it. 
+[![Live Deployment](https://img.shields.io/badge/LIVE_SYSTEM-Access_Portal-ff2a2a?style=for-the-badge&logo=vercel&logoColor=white)](https://svk-vasanthkumar.github.io/OSINT---Open-Source-Intelligence/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/svk-vasanthkumar/OSINT---Open-Source-Intelligence?style=for-the-badge&color=1f0808)](https://github.com/svk-vasanthkumar/OSINT---Open-Source-Intelligence)
+[![GitHub stars](https://img.shields.io/github/stars/svk-vasanthkumar/OSINT---Open-Source-Intelligence?style=for-the-badge&color=ff6a00)](https://github.com/svk-vasanthkumar/OSINT---Open-Source-Intelligence/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-ffcc00?style=for-the-badge)](LICENSE)
 
-The platform provides direct access to legitimate, curated OSINT challenge platforms and tools, acting as a bridge between theoretical cybersecurity concepts and hands-on investigation.
+<br>
 
-## ✨ Preview
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsvk-vasanthkumar%2FOSINT---Open-Source-Intelligence&label=SYSTEM_ACCESSES&labelColor=%23070202&countColor=%23ff2a2a&style=for-the-badge)
 
-<p align="center">
-  <img src="./assets/preview.png" alt="KASCORE OSINT Resource Hub Preview">
-</p>
-
-> **Note:** Add a screenshot at `assets/preview.png` to display the project preview.
+</div>
 
 ---
 
-## 🎯 Why this project?
+## 👁️ System Overview
 
-Most cybersecurity content stops at the explanation phase. This project follows a different approach:
+Most cybersecurity content stops at the explanation phase. The **KASCORE OSINT Resource Hub** is engineered to change that trajectory by moving learners from passive reading to active investigation.
 
-**Learn → Practice → Investigate → Verify**
+Designed with a high-performance, offensive-intelligence (Red Team) aesthetic, this terminal serves as a bridge between theoretical concepts and hands-on operational practice. 
 
-The goal is to give users something they can actually try immediately after discovering the content, transforming passive readers into active investigators. 
-
----
-
-## ⚡ Features
-
-### 🔎 OSINT Challenge Hub
-Explore five curated OSINT challenge platforms directly from a unified dashboard.
-
-### 🧭 Beginner → Advanced Path
-A structured training protocol helping users choose exactly where to begin based on their current experience level.
-
-### 🧩 Interactive Challenge Cards
-Each challenge mission is packaged as a case file including:
-* Focus and skill tags
-* Difficulty rating
-* Mission briefing (Description)
-* Official external link
-
-### 🔍 Resource Search
-Users can query the intelligence library and filter through methodologies, tools, and platforms in real-time on the client side.
-
-### 🎯 Challenge Filtering
-Instantly sort investigations by categories:
-* Beginner / Intermediate / Advanced
-* Image Investigation / Geolocation
-* Investigation / OSINT CTF
-* Verification
-
-### 🛡️ Ethical OSINT Guidance
-Built-in operational protocols establishing responsible-use principles for practicing OSINT safely and legally.
+> **The Operational Loop:** `Learn → Practice → Investigate → Verify`
 
 ---
 
-## 📂 OSINT Resources
+## ⚡ Core Capabilities
 
-| Resource | Focus | Level | Official Platform |
-|---|---|---|---|
-| **Bellingcat Challenges** | Image / Geolocation | Beginner → Intermediate | [challenge.bellingcat.com](https://challenge.bellingcat.com/) |
-| **OSINT Dojo** | Structured Investigation | Beginner → Advanced | [osintdojo.com](https://www.osintdojo.com/) |
-| **OSINT Industries CTF** | Scenario CTF | Beginner → Advanced | [ctf.osint.industries](https://ctf.osint.industries/) |
-| **Trace Labs** | Search Party | Intermediate → Advanced | [tracelabs.org](https://www.tracelabs.org/) |
-| **UK OSINT Community** | Open-Web Investigation | Beginner → Advanced | [ctf.osint.uk](https://ctf.osint.uk/) |
+* **🔎 Active Mission Control:** A dynamic grid of curated OSINT challenge platforms. Each mission card operates as a classified case file detailing difficulty, focus skills, and direct access links.
+* **🧭 Adaptive Deployment Path:** A structured decision matrix that routes operators to their ideal starting point—from beginner visual geolocation to advanced Search Party intelligence gathering.
+* **🗄️ Intelligence Database:** A client-side queried resource library. Instantly filter through documentation, platforms, and community databases without server latency.
+* **🛡️ Ethical Protocol Enforcement:** Built-in operational directives establishing strict rules of engagement for practicing Open-Source Intelligence safely, legally, and within scope.
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Target Matrix (OSINT Resources)
 
-This project is built for maximum performance, utilizing a lightweight footprint without relying on heavy frameworks. 
-
-* **HTML5** (Semantic structure)
-* **CSS3** (Custom properties, grid/flexbox layouts, responsive design)
-* **Vanilla JavaScript** (ES6+, DOM manipulation)
-* **IntersectionObserver API** (For scroll-triggered reveal animations)
-* **CSS Animations** (Hardware-accelerated transitions and keyframes)
-* **SVG Graphics** (Lightweight scalable icons and visual elements)
+| Mission Target | Operational Focus | Skill Level | Access |
+| :--- | :--- | :--- | :--- |
+| **Bellingcat** | Image / Geolocation | Beginner → Intermediate | [Open Platform](https://challenge.bellingcat.com/) |
+| **OSINT Dojo** | Structured Investigation | Beginner → Advanced | [Open Platform](https://www.osintdojo.com/) |
+| **OSINT Industries** | Scenario CTF | Beginner → Advanced | [Open Platform](https://ctf.osint.industries/) |
+| **Trace Labs** | Search Party | Intermediate → Advanced | [Open Platform](https://www.tracelabs.org/) |
+| **UK OSINT** | Open-Web Investigation | Beginner → Advanced | [Open Platform](https://ctf.osint.uk/) |
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Architecture & Infrastructure
 
-```text
-KASCORE-OSINT/
-│
-├── index.html        # Main application structure and layout
-├── style.css         # Styling, variables, animations, and responsive rules
-├── script.js         # Centralized data structure, UI logic, and interaction
-├── logo.png          # KASCORE brand identity
-└── assets/           # (Optional) Future screenshots and Open Graph images
+Built for maximum rendering efficiency and cinematic UI interactions without the bloat of heavy front-end frameworks.
+
+* **Core Engine:** HTML5, Vanilla JavaScript (ES6+)
+* **Styling System:** CSS3 (Custom Properties, Flex/Grid Layouts, Hardware-Accelerated Animations)
+* **Performance Logic:** Client-side filtering, `IntersectionObserver` API for scroll-reveal logic, lightweight SVG-based visuals.
+* **Typography:** *Space Grotesk* (UI/Body) & *JetBrains Mono* (Technical/Terminal Outputs).
+
+---
+
+## 🔗 Quick Links
+
+* **Live Access Portal:** [Initialize System](https://svk-vasanthkumar.github.io/OSINT---Open-Source-Intelligence/)
+* **Source Repository:** [GitHub Codebase](https://github.com/svk-vasanthkumar/OSINT---Open-Source-Intelligence)
+
+---
+
+## 👨‍💻 System Architect
+
+**VASANTHKUMAR S (SVK)** *Founder & Lead Developer @ KASCORE* Driving practical technology and cybersecurity learning through interactive deployments.
+
+<a href="https://linkedin.com/in/svk-vasanthkumar">
+  <img src="https://img.shields.io/badge/LinkedIn-Profile-0a66c2?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+</a>
+<a href="https://github.com/svk-vasanthkumar">
+  <img src="https://img.shields.io/badge/GitHub-Profile-070202?style=for-the-badge&logo=github" alt="GitHub" />
+</a>
+<a href="https://x.com/its__svk">
+  <img src="https://img.shields.io/badge/X-Profile-000000?style=for-the-badge&logo=x" alt="X (Twitter)" />
+</a>
+
+<br>
+
+<div align="center">
+  <sub>SYSTEM TERMINAL V2.0 • BUILT WITH HIGH-CONTRAST AESTHETICS • © 2026 KASCORE</sub>
+</div>
