@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASCORE | OSINT Intelligence System</title>
+    <meta name="description" content="Explore practical OSINT challenges, investigation resources and cybersecurity learning paths curated by KASCORE and SVK.">
+    
+    <meta property="og:title" content="KASCORE | OSINT Challenges & Resources">
+    <meta property="og:description" content="Explore practical OSINT challenges, investigation resources and cybersecurity learning paths curated by KASCORE and SVK.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sys-loader">
+        <div class="loader-content">
+            <span class="sys-label">KASCORE</span>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <span class="sys-text glow-text">SYSTEM INITIALIZING...</span>
+        </div>
+    </div>
+
+    <div class="bg-system">
+        <div class="bg-layer bg-gradient"></div>
+        <div class="bg-layer bg-grid"></div>
+        <div class="bg-layer bg-radial"></div>
+        <div class="inv-thread-container">
+            <div class="inv-thread-line" id="main-thread"></div>
+        </div>
+    </div>
+
+    <nav class="scroll-indicator" id="scroll-nav">
+        <a href="#hero" class="scroll-dot active" data-tooltip="00 SYSTEM"></a>
+        <a href="#intro" class="scroll-dot" data-tooltip="01 DISCOVER"></a>
+        <a href="#loop" class="scroll-dot" data-tooltip="02 LOOP"></a>
+        <a href="#missions" class="scroll-dot" data-tooltip="03 MISSIONS"></a>
+        <a href="#start" class="scroll-dot" data-tooltip="04 PATH"></a>
+        <a href="#resources" class="scroll-dot" data-tooltip="05 DATABASE"></a>
+        <a href="#creator" class="scroll-dot" data-tooltip="06 CREATOR"></a>
+    </nav>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo interactive">
+                <img src="logo.png" alt="KASCORE" class="logo-img" onerror="this.outerHTML='<span class=\'logo-fallback\'>KASCORE</span>'">
+            </a>
+            
+            <button class="mobile-menu-toggle interactive" aria-label="Toggle menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <div class="nav-content">
+                <nav class="nav-links">
+                    <a href="#intro" class="interactive">01. DISCOVER</a>
+                    <a href="#missions" class="interactive">02. MISSIONS</a>
+                    <a href="#resources" class="interactive">03. DATABASE</a>
+                    <a href="#creator" class="interactive">04. CREATOR</a>
+                </nav>
+                <div class="sys-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">SYS.ONLINE</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section full-screen-section observe-section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="sys-meta-panel">
+                        <div class="meta-row"><span class="meta-lbl">MODE</span><span class="meta-val accent-red">PASSIVE OSINT</span></div>
+                        <div class="meta-row"><span class="meta-lbl">DATABASE</span><span class="meta-val">05 CHALLENGES</span></div>
+                        <div class="meta-row"><span class="meta-lbl">STATUS</span><span class="meta-val accent-alert pulse">TRACKING</span></div>
+                    </div>
+                    
+                    <h1 class="hero-title">CAN YOU FIND THE CLUE<br><span class="accent-red glow-text">WITHOUT HACKING?</span></h1>
+                    <p class="hero-subtitle">5 real OSINT challenges and resources to help you learn how to find, connect and verify information from open sources.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#missions" class="btn btn-primary interactive">
+                            <span class="btn-scanline"></span>
+                            EXPLORE CHALLENGES &rarr;
+                        </a>
+                        <a href="#resources" class="btn btn-secondary interactive">VIEW DATABASE</a>
+                    </div>
+                    
+                    <div class="linkedin-prompt reveal delay-1">
+                        <div class="prompt-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        </div>
+                        <div class="prompt-content">
+                            <p>CAME FROM THE OSINT POST? <span class="accent-red">You're in the right place.</span></p>
+                            <a href="#missions" class="interactive">START WITH CHALLENGES &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal delay-2">
+                    <div class="cyber-globe">
+                        <div class="globe-ring r1"></div>
+                        <div class="globe-ring r2"></div>
+                        <div class="globe-ring r3"></div>
+                        <div class="scan-line"></div>
+                        
+                        <div class="node n1" data-label="PUBLIC WEB"></div>
+                        <div class="node n2" data-label="WEBSITE"></div>
+                        <div class="node n3" data-label="LOCATION"></div>
+                        <div class="node n4 target" data-label="VERIFIED CLUE"></div>
+                        
+                        <svg class="connection-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path d="M20,30 L50,20 L80,45 L50,80" class="animated-path"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro" class="section container observe-section mt-lg">
+            <div class="section-header reveal">
+                <div class="sys-label">01 / DISCOVER_PROTOCOL</div>
+                <h2 class="section-title">OSINT, IN ONE MINUTE.</h2>
+                <p class="section-desc">Open-Source Intelligence (OSINT) is the process of finding, collecting, connecting and verifying information that is publicly available.</p>
+            </div>
+
+            <div class="intro-sequence reveal delay-1">
+                <div class="seq-node interactive">
+                    <div class="seq-core">PUBLIC WEB</div>
+                    <div class="seq-panel">The starting point. Search engines, archives, and open databases.</div>
+                </div>
+                <div class="seq-line"></div>
+                <div class="seq-row">
+                    <div class="seq-node small interactive"><div class="seq-core">IMAGE</div><div class="seq-panel">Visual evidence reveals location, time and context.</div></div>
+                    <div class="seq-node small interactive"><div class="seq-core">PROFILE</div><div class="seq-panel">Digital footprints, usernames, and public activity.</div></div>
+                    <div class="seq-node small interactive"><div class="seq-core">DOCUMENT</div><div class="seq-panel">Public records, metadata, and archived text.</div></div>
+                </div>
+                <div class="seq-line"></div>
+                <div class="seq-node interactive highlight">
+                    <div class="seq-core">VERIFICATION</div>
+                    <div class="seq-panel">Cross-referencing clues to confirm factual accuracy.</div>
+                </div>
+                <div class="seq-line"></div>
+                <div class="seq-node target interactive">
+                    <div class="seq-core">INTELLIGENCE</div>
+                    <div class="seq-panel">Actionable, verified information derived from public sources.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="loop" class="section container observe-section mt-lg">
+            <div class="radar-container reveal">
+                <div class="radar-interface">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-center">BUILD<br>EVIDENCE</div>
+                    
+                    <div class="radar-node rn-1 interactive" data-desc="Locate public data sources across the open web.">
+                        <span class="rn-num">01</span><span class="rn-label">FIND</span>
+                    </div>
+                    <div class="radar-node rn-2 interactive" data-desc="Link the scattered clues to form a hypothesis.">
+                        <span class="rn-num">02</span><span class="rn-label">CONNECT</span>
+                    </div>
+                    <div class="radar-node rn-3 interactive" data-desc="Cross-check the facts against multiple sources.">
+                        <span class="rn-num">03</span><span class="rn-label">VERIFY</span>
+                    </div>
+                    <div class="radar-node rn-4 interactive" data-desc="Build solid, undeniable evidence from your findings.">
+                        <span class="rn-num">04</span><span class="rn-label">PROVE</span>
+                    </div>
+                    
+                    <div class="radar-info-panel">
+                        <div class="ri-title">SYSTEM LOOP</div>
+                        <div class="ri-desc">Hover over a node to analyze the investigation phase.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="missions" class="section container observe-section mt-lg">
+            <div class="section-header reveal">
+                <div class="sys-label">02 / MISSION_CONTROL</div>
+                <h2 class="section-title">ACTIVE INVESTIGATIONS</h2>
+                <div class="mission-status-bar">
+                    <span class="ms-label">DATABASE:</span> <span class="ms-val">05 AVAILABLE</span>
+                    <span class="ms-spacer">|</span>
+                    <span class="ms-label">STATUS:</span> <span class="ms-val accent-alert pulse">ONLINE</span>
+                </div>
+            </div>
+
+            <div class="filter-controls reveal delay-1">
+                <button class="filter-btn active interactive" data-filter="all">ALL_MISSIONS</button>
+                <button class="filter-btn interactive" data-filter="beginner">BEGINNER</button>
+                <button class="filter-btn interactive" data-filter="advanced">ADVANCED</button>
+                <button class="filter-btn interactive" data-filter="image">IMAGE / GEO</button>
+                <button class="filter-btn interactive" data-filter="ctf">CTF</button>
+            </div>
+
+            <div id="missions-grid" class="missions-grid reveal delay-2"></div>
+        </section>
+
+        <div class="modal-overlay" id="case-modal">
+            <div class="case-file">
+                <button class="modal-close interactive" id="modal-close" aria-label="Close modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                <div class="cf-header">
+                    <span class="cf-sys">CLASSIFIED_FILE // KASCORE</span>
+                    <h3 class="cf-title" id="cf-title">MISSION NAME</h3>
+                </div>
+                <div class="cf-body">
+                    <div class="cf-row"><span class="cf-label">DIFFICULTY:</span> <span class="cf-val" id="cf-diff">--</span></div>
+                    <div class="cf-row"><span class="cf-label">PRACTICE:</span> <span class="cf-val" id="cf-focus">--</span></div>
+                    <div class="cf-desc">
+                        <span class="cf-label">MISSION_BRIEF:</span>
+                        <p id="cf-desc">--</p>
+                    </div>
+                </div>
+                <div class="cf-footer">
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="cf-link" class="btn btn-primary btn-full interactive">
+                        <span class="btn-scanline"></span>
+                        START INVESTIGATION ↗
+                    </a>
+                    <span class="cf-hint">ESC TO CLOSE</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="decision" class="section container observe-section mt-lg">
+            <div class="decision-interface reveal">
+                <div class="di-header">
+                    <div class="sys-label">03 / DECISION_MATRIX</div>
+                    <h2 class="section-title">WHAT KIND OF INVESTIGATION<br>DO YOU WANT?</h2>
+                </div>
+                <div class="di-layout">
+                    <div class="di-options">
+                        <button class="di-btn interactive" data-target="0">I'M NEW TO THIS</button>
+                        <button class="di-btn interactive" data-target="0">I LIKE VISUAL CLUES</button>
+                        <button class="di-btn interactive" data-target="2">I WANT CTFs</button>
+                        <button class="di-btn interactive" data-target="3">REAL-WORLD STYLE CASES</button>
+                        <button class="di-btn interactive" data-target="4">I WANT A MONTHLY CHALLENGE</button>
+                    </div>
+                    <div class="di-result-panel" id="di-result">
+                        <div class="di-placeholder">
+                            <span class="pulse accent-alert">AWAITING INPUT...</span>
+                            <p>Select a parameter on the left to configure your optimal starting point.</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="start" class="section container observe-section mt-lg">
+            <div class="section-header text-center reveal">
+                <div class="sys-label">04 / PROGRESSION_PATH</div>
+                <h2 class="section-title">TRAINING PROTOCOL</h2>
+            </div>
+            
+            <div class="progression-tunnel reveal delay-1">
+                <div class="pt-step interactive">
+                    <div class="pt-marker">01</div>
+                    <div class="pt-content">
+                        <h4>BEGINNER</h4>
+                        <p>Bellingcat Challenges</p>
+                    </div>
+                </div>
+                <div class="pt-line"></div>
+                <div class="pt-step interactive">
+                    <div class="pt-marker">02</div>
+                    <div class="pt-content">
+                        <h4>STRUCTURED</h4>
+                        <p>OSINT Dojo</p>
+                    </div>
+                </div>
+                <div class="pt-line"></div>
+                <div class="pt-step interactive">
+                    <div class="pt-marker">03</div>
+                    <div class="pt-content">
+                        <h4>SCENARIO CTF</h4>
+                        <p>OSINT Industries</p>
+                    </div>
+                </div>
+                <div class="pt-line"></div>
+                <div class="pt-step interactive final">
+                    <div class="pt-marker">04</div>
+                    <div class="pt-content">
+                        <h4>ADVANCED</h4>
+                        <p>Trace Labs / UK OSINT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-2 reveal delay-2">
+                <h3 class="sys-label mb-1">READY TO INVESTIGATE?</h3>
+                <a href="#missions" class="btn btn-secondary interactive">INITIALIZE FIRST MISSION &rarr;</a>
+            </div>
+        </section>
+
+        <section id="resources" class="section container observe-section mt-lg">
+            <div class="section-header reveal">
+                <div class="sys-label">05 / INTELLIGENCE_LIBRARY</div>
+                <h2 class="section-title">RESOURCE DATABASE</h2>
+            </div>
+            
+            <div class="resource-interface reveal delay-1">
+                <div class="ri-search-bar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ri-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="resource-search" class="interactive" placeholder="Search OSINT resources, methodologies, tools...">
+                    <span class="ri-count" id="resource-count">05 RESULTS</span>
+                </div>
+                
+                <div id="resources-list" class="resources-list"></div>
+            </div>
+        </section>
+
+        <section id="safety" class="section container observe-section mt-lg">
+            <div class="protocol-panel reveal">
+                <div class="protocol-header">
+                    <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <div>
+                        <h2 class="section-title">ETHICAL OPERATIONS PROTOCOL</h2>
+                        <p class="section-desc">OSINT is powerful because information is public. Use that power responsibly.</p>
+                    </div>
+                </div>
+                <div class="protocol-grid">
+                    <div class="p-module interactive">
+                        <span class="pm-num">01</span>
+                        <h4>STAY LEGAL</h4>
+                        <p>Use authorized challenges.</p>
+                    </div>
+                    <div class="p-module interactive">
+                        <span class="pm-num">02</span>
+                        <h4>RESPECT PRIVACY</h4>
+                        <p>Don't target private individuals.</p>
+                    </div>
+                    <div class="p-module interactive">
+                        <span class="pm-num">03</span>
+                        <h4>VERIFY</h4>
+                        <p>Don't trust a single source.</p>
+                    </div>
+                    <div class="p-module interactive">
+                        <span class="pm-num">04</span>
+                        <h4>STAY IN SCOPE</h4>
+                        <p>Follow platform rules strictly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="creator" class="section container observe-section mt-lg">
+            <div class="section-header text-center reveal">
+                <div class="sys-label">06 / SYSTEM_ARCHITECT</div>
+                <h2 class="section-title">BEHIND THE SYSTEM</h2>
+            </div>
+            
+            <div class="creator-panel reveal delay-1">
+                <div class="cp-id">
+                    <div class="cp-avatar">
+                        <span>SVK</span>
+                    </div>
+                    <div class="cp-info">
+                        <h3>Vasanthkumar S</h3>
+                        <span class="cp-role accent-red">Founder, KASCORE</span>
+                    </div>
+                </div>
+                <div class="cp-bio">
+                    <p>KASCORE focuses on practical technology and cybersecurity learning — turning complex concepts into useful resources, challenges and hands-on learning experiences.</p>
+                    <div class="cp-tags">
+                        <span class="tag">TECH</span>
+                        <span class="tag">CYBERSECURITY</span>
+                        <span class="tag">OSINT</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-modules reveal delay-2">
+                <a href="https://www.linkedin.com/in/svk-vasanthkumar/" target="_blank" rel="noopener noreferrer" class="soc-module interactive">
+                    <span class="soc-platform">LINKEDIN</span>
+                    <span class="soc-handle">SVK / Vasanthkumar</span>
+                    <span class="soc-arrow">↗</span>
+                </a>
+                <a href="https://github.com/svk-vasanthkumar" target="_blank" rel="noopener noreferrer" class="soc-module interactive">
+                    <span class="soc-platform">GITHUB</span>
+                    <span class="soc-handle">svk-vasanthkumar</span>
+                    <span class="soc-arrow">↗</span>
+                </a>
+                <a href="https://www.instagram.com/svk__vasanthkumar/" target="_blank" rel="noopener noreferrer" class="soc-module interactive">
+                    <span class="soc-platform">INSTAGRAM</span>
+                    <span class="soc-handle">@svk__vasanthkumar</span>
+                    <span class="soc-arrow">↗</span>
+                </a>
+                <a href="https://x.com/its__svk" target="_blank" rel="noopener noreferrer" class="soc-module interactive">
+                    <span class="soc-platform">X (TWITTER)</span>
+                    <span class="soc-handle">@its__svk</span>
+                    <span class="soc-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section full-screen-section cta-section observe-section mt-lg">
+            <div class="cta-network-bg"></div>
+            <div class="container text-center reveal">
+                <h2 class="cta-mega-title">DON'T JUST CONSUME CYBERSECURITY.<br><span class="accent-red glow-text">INVESTIGATE.</span></h2>
+                <p class="cta-desc">Pick a challenge. Follow the clues. Build the evidence.</p>
+                
+                <div class="hero-actions justify-center mt-2">
+                    <a href="#missions" class="btn btn-primary interactive">
+                        <span class="btn-scanline"></span>
+                        START INVESTIGATING &rarr;
+                    </a>
+                    <a href="https://www.linkedin.com/in/svk-vasanthkumar/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary interactive">FOLLOW SVK &rarr;</a>
+                </div>
+                
+                <div class="cta-signature mt-lg">
+                    <span class="sig">KASCORE</span> <span class="sig-x">×</span> <span class="sig">SVK</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <div class="f-logo">KASCORE</div>
+                <p class="f-tag">Practical Technology × Cybersecurity</p>
+            </div>
+            <div class="footer-meta">
+                <p>Built by Vasanthkumar S (SVK), Founder of KASCORE.</p>
+                <p class="f-copy">&copy; 2026 KASCORE. SYSTEM TERMINAL V2.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
