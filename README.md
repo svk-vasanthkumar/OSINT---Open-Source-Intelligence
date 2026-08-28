@@ -2,7 +2,7 @@
 
 <img src="./logo.png" alt="KASCORE Logo" width="180">
 
-# 🔴 KASCORE OSINT Intelligence Terminal
+# KASCORE OSINT Intelligence Terminal
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=FF2A2A&center=true&vCenter=true&width=600&lines=Open-Source+Intelligence+Matrix;Curated+Investigation+Challenges;Interactive+Cyber+Dashboard;System+Architecture+by+SVK)](https://git.io/typing-svg)
 
